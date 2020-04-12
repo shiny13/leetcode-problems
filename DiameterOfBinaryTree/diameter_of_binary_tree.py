@@ -7,7 +7,27 @@ class TreeNode:
 
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        return 0
+        if not root:
+			return 0
+	
+		def max_depth(node: TreeNode, vals: List[int]) -> int:
+			if not node:
+				return 0
+	
+			left: int = max_depth(node.left, vals)
+			right: int = max_depth(node.right, vals)
+	
+			vals.append(left + right)
+	
+			if left > right:
+				return left + 1
+			else:
+				return right + 1
+	
+		nums: List[int] = []
+		ret = max_depth(root, nums)
+	
+		return max(nums)
 
 if __name__ == '__main__':
     sol = Solution()
