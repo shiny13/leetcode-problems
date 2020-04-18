@@ -4,14 +4,11 @@ from typing import List
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         nr = len(grid)
-        
         if nr==0  :
             return 0
         
         nc = len(grid[0])
-        
         num_islands = 0
-        
         for r in range(nr):
             for c in range(nc):
                 if grid[r][c] == "1":
