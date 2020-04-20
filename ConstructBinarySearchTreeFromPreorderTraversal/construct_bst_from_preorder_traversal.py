@@ -18,20 +18,23 @@ class Solution:
                 if root.val > val:
                     if not root.left:
                         root.left = TreeNode(val)
+                        print("if root.left: " + str(val))
                         break
                     else:
                         root = root.left
-                        print("else root.left: " + str(root.left))
+                        print("else root.left: " + str(val))
                 else:
                     if not root.right:
                         root.right = TreeNode(val)
+                        print("if root.right: " + str(val))
                         break
                     else:
                         root = root.right
-                        print("else root.right: " + str(root.right))
+                        print("else root.right: " + str(val))
         head = root 
         for i in range(1, len(preorder)):
             head = root 
+            print("inserting: {}".format(i))
             insertIntoTree(head, preorder[i])
 
         return head
