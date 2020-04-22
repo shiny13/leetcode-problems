@@ -15,6 +15,7 @@ class Solution:
                 num_sub_arrays += sums[our_sum-k]
             sums[our_sum] += 1
         print(num_sub_arrays)
+        print(sums)
         return num_sub_arrays
 
 if __name__ == '__main__':
