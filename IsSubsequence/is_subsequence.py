@@ -9,14 +9,13 @@ class Solution:
 
         while s_idx < s_len and t_idx < t_len and s_idx <= t_idx:
             if s[s_idx] == t[t_idx]:
-                print("{} {} {}".format(s_idx, s[s_idx], t[t_idx]))
+                #print("{} {} {}".format(s_idx, s[s_idx], t[t_idx]))
                 s_idx += 1
             t_idx += 1
-        print("s index: {} t index: {}".format(s_idx, t_idx))
+        #print("s index: {} t index: {}".format(s_idx, t_idx))
 
         if s_idx == s_len:
             return True
-
         return False
 
 if __name__ == '__main__':
