@@ -42,6 +42,7 @@ class RandomizedSet:
         _rand = randint(0, len(self.e)-1)
         return self.e[_rand]
         
+        
 if __name__ == '__main__':
     # Your RandomizedSet object will be instantiated and called as such:
     randomSet = RandomizedSet()
