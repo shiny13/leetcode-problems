@@ -33,9 +33,12 @@ class Solution:
         return root 
         """
         def recur(u):
-            if not u: return TreeNode(val)
-            if val < u.val: u.left  = recur(u.left)
-            else:           u.right = recur(u.right)
+            if not u: 
+                return TreeNode(val)
+            if val < u.val: 
+                u.left  = recur(u.left)
+            else:           
+                u.right = recur(u.right)
             return u
         return recur(root)
 """
