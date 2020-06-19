@@ -5,7 +5,7 @@ class Solution:
     def hIndex(self, citations: List[int]) -> int:
         if citations is None or len(citations) == 0: 
             return 0
-        i, n, res = 0, len(citations), 0
+        n, res = len(citations), 0
         mid, start, end = 0, 0, len(citations) - 1
         while start <= end:
             mid = start + (end - start) // 2
