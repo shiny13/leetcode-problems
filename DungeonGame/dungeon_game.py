@@ -13,6 +13,8 @@ class Solution:
         for i in range(m-1,-1,-1):
             for j in range(n-1,-1,-1):
                 dp[i][j] = max(min(dp[i+1][j],dp[i][j+1])-dungeon[i][j],1)
+                for _i in range(m+1): print(dp[_i])
+                print(' ')
         
         return dp[0][0]
 
