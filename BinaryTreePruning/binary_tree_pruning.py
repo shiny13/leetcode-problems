@@ -17,6 +17,7 @@ class Solution:
                 node.left = None 
             if not a2:
                 node.right = None 
+            return node.val == 1 or a1 or a2 
 
         return root if prune(root) else None
 
