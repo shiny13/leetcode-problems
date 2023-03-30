@@ -24,7 +24,11 @@ namespace TwoSum
                     result[1] = i;
                     break;
                 }
-                hasMap.Add(nums[i], i);
+
+                if (!hasMap.ContainsKey(nums[i]))
+                {
+                    hasMap.Add(nums[i], i);
+                }
             }
 
             return result;
